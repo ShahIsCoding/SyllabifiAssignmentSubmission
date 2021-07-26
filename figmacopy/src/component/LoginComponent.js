@@ -10,9 +10,9 @@ function LogIn() {
                     </div>          
                     <div className='form'>
                         <div className='logo'>
-                            <div className='logo__semicircle'></div>
-                            <div className='logo__circle-y'></div>
-                            <div className='logo__circle-p'></div>                     </div>
+                            <div className='semicircle'></div>
+                            <div className='circle circle-y'></div>
+                            <div className='circle circle-p'></div>                     </div>
                         <div className='company_name'>
                             <h2>Company</h2>    
                         </div>
