@@ -1,6 +1,5 @@
 import React from 'react';
-
-import LogIn from './Login.Component';
+import LogIn from './LoginComponent';
 
 function Main() {
     return(
