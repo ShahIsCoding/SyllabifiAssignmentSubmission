@@ -2,54 +2,51 @@ import React from 'react';
 
 function LogIn() {
     return( 
-        <div className='LogIn '>
-            <div className='contanier'>
+        <div className='bg'>
+            <div className='LogIn main-card'>
+                <div className='LogIn__img'></div>          
                 <div className='LogIn__form'>
-                    <div className='LogIn__form--img'>
-                    
-                    </div>          
-                    <div className='form'>
-                        <div className='logo'>
-                            <div className='semicircle'></div>
-                            <div className='circle circle-y'></div>
-                            <div className='circle circle-p'></div>                     </div>
-                        <div className='company_name'>
-                            <h2>Company</h2>    
-                        </div>
-                        <h3 className='register p45'>Register</h3>
-                            <form>
-                                <div className='p45'>
-                                    <label>Name</label>
-                                    <input type='text' name='name' placeholder='Enter full name'/>
-                                </div>
-                                <div className='p45'>
-                                    <label>Email</label>
-                                    <input type='email' name='email' placeholder='Enter Email'/>
-                                </div>
-                                <div className='p45'>
-                                    <label>Create Password</label>
-                                    <input type='password' name='password' placeholder='Enter Password'/>
-                                </div>
-                                <div className='p45'>
-                                    <label>Re-enter Password</label>
-                                    <input type='password' name='password' placeholder='Re-enter Password'/>
-                                </div>
-                            </form>
-                            <div className='btns'>
-                                    <div className='btns--b1'>
-                                        <button className='btn btn-sign'>Sign Up &#8250;</button>
-                                        <div className='login'>
-                                            <h4> Already have an account?</h4>
-                                            <a href='#'>Login here</a>
-                                        </div>
-                                    </div>
-                                    
-                                    <div className='btns--b2'>
-                                        <h4> Or Sign Up with  </h4>
-                                        <a href='#'>Goolge</a>
-                                    </div>
-                            </div>
+                    <div className='logo'>
+                        <div className='logo__semicircle'></div>
+                        <div className='logo__circle logo__circle--y'></div>
+                        <div className='logo__circle logo__circle--p'></div>
                     </div>
+                    <div className='company_name'>
+                        <h2>Company</h2>    
+                    </div>
+                    <h3 className='register p45'>Register</h3>
+                    <form className='Form'>
+                        <div className='Form__divs'>
+                            <label className='Form__divs--label'>Name</label>
+                            <input className='Form__divs--input' type='text' name='name' placeholder='Enter full name'/>
+                        </div>
+                        <div className='Form__divs'>
+                            <label className='Form__divs--label'>Email</label>
+                            <input className='Form__divs--input' type='email' name='email' placeholder='Enter Email'/>
+                        </div>
+                        <div className='Form__divs'>
+                            <label className='Form__divs--label'>Create Password</label>
+                           <input className='Form__divs--input' type='password' name='password' placeholder='Enter Password'/>
+                        </div>
+                        <div className='Form__divs'>
+                            <label className='Form__divs--label'>Re-enter Password</label>
+                           <input className='Form__divs--input' type='password' name='password' placeholder='Re-enter Password'/>
+                        </div> 
+
+                    <div className='btns'>
+                        <div className='btns__b1'>
+                            <button className='btns__purple'>Sign Up &#8250;</button>
+                            <div className='login'>
+                                <h4> Already have an account?</h4>
+                                <a href='#'>Login here</a>
+                            </div>
+                        </div>
+                        <div className='btns__b2'>
+                            <h4> Or Sign Up with  </h4>
+                            <a href='#'>Goolge</a>
+                        </div>
+                    </div> 
+                    </form>
                 </div>
             </div>
         </div>
