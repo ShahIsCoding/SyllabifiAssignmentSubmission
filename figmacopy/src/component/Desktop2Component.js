@@ -41,14 +41,14 @@ function Desktop2() {
                     </div>
                     <div className='pentab'>
                         <h4>Do you have a Pen-tablet/i-pad with stylus/android tablet with stylus?</h4>
-                        <button className='btn-outline'>Yes</button>
-                        <button className='btn-outline'>No</button>
+                        <button className='btn-outline btn__click'>Yes</button>
+                        <button className='btn-outline btn__click'>No</button>
                     </div>
                     <div className='footer'>
                         <a className='previous'>Previous</a>
                         <div className='footer__right'>
                             <a className='skip'>Skip</a>
-                            <button className='btns__purple'>Next</button>
+                            <button className='btns__purple btn__click'>Next</button>
                         </div>        
                     </div>
                 </div>
