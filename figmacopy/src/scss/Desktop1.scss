@@ -1,0 +1,99 @@
+
+.desk{
+    position: absolute;
+    width: 922px;
+    height: 663px;
+    margin: 0 222px;
+    top: 52px;
+    
+    .header {
+      text-align: center;
+      position: relative;
+      top: 66px;
+  
+      h3{
+        color: #25252D;
+      }
+      h6{
+        color: #828282;
+      }
+    }
+    
+    .footer{
+      position: relative;
+      top: 473px;
+      left: 45px;
+      display: flex;
+      flex-flow: nowrap row;
+      justify-content: space-between;
+      align-items: baseline;
+      width:777px;
+      a{
+        text-decoration: none;
+        color: #8759F2;
+        cursor: pointer;
+      }
+      button{
+      width: 100px;
+      height: 41px;  
+      margin:0 0 0 24px ;
+    }
+    }
+    .cards{
+      display: flex;
+      flex-flow: wrap row;
+  
+      width: 800px;
+      height: 272px;
+  
+      position:absolute;
+      left: 66px;
+      top: 230px;
+    }
+  
+    .card{
+        margin: 16px 0 0 16px;
+        width: 248px;
+        height: 112px;
+        border: 1px solid #EEEAF9;
+        border-radius: 8px;
+  
+        &__img{
+          margin: 8px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 96px;  
+          height: 96px;
+          border-radius: 8px;
+          &--maths{
+            background-image: url(../img/maths.jpg);
+          }
+          &--chem{
+            background-image: url(../img/chem.jpg);
+          }
+          &--phy{
+            background-image: url(../img/physics.jpg);
+          }
+          &--bio{
+            background-image: url(../img/bio.jpg);
+          }
+          &--lr{
+            background-image: url(../img/lr.jpg);
+          }
+          &--other{
+            background-image: url(../img/others.jpg);
+          }
+        }
+      &__text{
+        position: absolute;
+        top: 48px;
+        left: 120px;
+      }  
+      input{
+        position: absolute;
+        top: 11px;
+        right: 11px;
+      }
+    }
+  }
+  
