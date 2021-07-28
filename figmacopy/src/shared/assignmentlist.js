@@ -28,14 +28,14 @@ export const list =[
         progess:null       
     } ,    
     {   id:4,
-        number:15,
+        number:18,
         money:25,
         numofquestions:15,
         status:'Completed',
         progess:100    
     } ,
     {   id:5,
-        number:15,
+        number:19,
         money:25,
         numofquestions:15,
         status:'Rejected',

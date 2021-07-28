@@ -247,16 +247,11 @@ $size14:1vw;
               &__header{
                 display: block;
 
-                &--top{
-                  font-size: 22px;   
-                  color: #25252D;
-                  font-weight: bold;               
-                }
                 &--bottom{
                   font-weight: normal;
                   color: #6E6E86;
                   h4{display: inline-block; font-size: 16px;}
-                  h3{display: inline-block;color: #8759F2;float: right;font-size: 16px;}
+                  h3{color: #8759F2;float: right;font-size: 16px;}
                 }
                 margin-bottom: 16px;
               }
@@ -278,6 +273,7 @@ $size14:1vw;
                   width: 100%;
                   height: 73px;
                   border-radius: 4px;
+
 
                   &:hover{
                     background-color: #F7F7F8;
@@ -334,7 +330,7 @@ $size14:1vw;
                     }
                   }
                   &__status{
-                    width: 86px;
+
                     height: 28px;
 
                     border-radius: 50px;  
@@ -345,12 +341,12 @@ $size14:1vw;
                     margin: 21px 0 24px 0;
                     padding:5px;
                     &--assigned{
-                      background-color: #DBF3ED;
+                      background-color: #DBF3ED;                    width: 86px;
                     }
                     &--rejected{
-                      background-color: rgba(245, 61, 107, 0.2);
+                      background-color: rgba(245, 61, 107, 0.2);width: 113px;
                     }
-                    &--completed{background-color: rgba(250, 181, 52, 0.25);;}
+                    &--completed{background-color: rgba(250, 181, 52, 0.25);width: 121px;}
                     img{
                       display: inline-block;
                       padding: 4px;
@@ -360,9 +356,6 @@ $size14:1vw;
                       font-weight: 600;
                       font-size: 12px;
                     }
-                    .assigned{color: #00BA88;}
-                    .rejected{}
-                    .completed{}
                   }
                   &__button{
 
@@ -381,9 +374,83 @@ $size14:1vw;
               }
             }
           }
+
           &--box3{
             max-width: 750px;
             height: 515px;
+
+            .box3{
+              &__body{
+                display: flex;
+                flex-flow: nowrap column;
+                align-items: flex-start;
+                
+                .collapsed{
+                  width: 100%;
+                  height: 56px;
+                  border-top: 1px solid #DFE1E6;
+                  .b3__item--header{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;  
+                      
+                    h4{font-size: 16px;
+                      color: #262626;
+                                          
+                      margin: 20px 0 17px 0;
+                      }
+                      img{
+                        transform: scale(0.5);
+                      }
+                  }
+                }
+                &--items{
+                  border-top: 1px solid #DFE1E6;
+                  background-color: rgba(#F4F5F7,0.5);
+                  margin: 24px 0;
+                  .b3__item{
+                    width: 162px;
+                    height: 144px;
+      
+                    padding:8px;
+                    background: #FFFFFF;
+                    border: 1px solid rgba(66, 82, 110, 0.15);
+                    box-sizing: border-box;
+                    border-radius: 8px;
+                    margin-right: 12px;
+                    &--header{
+                      display: flex;
+                      flex-direction: row;
+                      justify-content: space-between;
+                      h4{font-size: 16px;
+                      color: #262626;
+                                          
+                      margin: 20px 0 17px 0;
+                      }
+                      img{
+                        transform: scale(0.5);
+                      }
+                    }
+                    &--body{
+                      display: flex;
+                      flex-flow: wrap row;
+                      justify-content: flex-start;
+  
+                    }                  
+                    h6{
+                      margin-top: 12px;
+                      font-size: 14px;
+                      line-height: 130%;
+                      color: #6E6E86;
+  
+        
+                    }
+                  }
+                }
+  
+              }
+            }
+           
           }
        }
         &__right{

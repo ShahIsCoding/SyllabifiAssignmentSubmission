@@ -104,4 +104,16 @@ html,body,*{
 
   }
   
+  .div__header{
+    font-size: 22px;
+    font-weight: bold;
+    color: #25252D;
+  }
   
+  .collapse{
+    display: none;
+  }
+  .notcollapse{
+    display: block;
+    height: 56px;
+  }
