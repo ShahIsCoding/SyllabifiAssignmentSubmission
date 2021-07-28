@@ -1,5 +1,7 @@
 import React,{Component} from 'react';
 import {list} from '../shared/assignmentlist';
+import { practicelist } from '../shared/practicelist';
+import {rankinglist} from '../shared/rankinglist';
 class LevelBody extends Component{ 
     
     constructor(props){
@@ -94,7 +96,7 @@ class LevelBody extends Component{
                 return(
                     <div className='assignment__status assignment__status--completed'>
                         <img src={`${process.env.PUBLIC_URL}/assets/images/icons/completed.png`}  />
-                        <h6 className=''>{(assignment.progess!==100)?assignment.progess:null}{assignment.status}</h6>
+                        <h6 className=''>{(assignment.progess!==100)?assignment.progess+'%':null}{assignment.status}</h6>
                     </div>
                 );
             }
@@ -115,15 +117,47 @@ class LevelBody extends Component{
                         <h4>&#x20b9; {assignment.money}/q</h4>
                         <h5>{assignment.numofquestions} questions</h5>
                     </div>
-                    <div>
+ 
                         {assignment_status(assignment)}
-                    </div>
+
                         <a className='assignment__button'>Continue</a>
                 </div>
             );
         });
 
+        const practice = practicelist.subtopics.map((list) =>{
+            return(
+                <div className='b3__item'>
+                    <img src={`${process.env.PUBLIC_URL}/assets/images/${list.thumbnail}`}  />
+                    <h6>{list.subheading}</h6>
+             </div>
+            );
+        })
 
+        const leaders = rankinglist.slice(0, 7).map((leader) =>{
+            return(
+                <div className='leaderboard--item'>
+                    {
+                        (leader.rank===1)?
+                        <img src={`${process.env.PUBLIC_URL}/assets/images/icons/rank1.png`} className='leader--rank'/>
+                        :
+                        (leader.rank === 2)?
+                        <img src={`${process.env.PUBLIC_URL}/assets/images/icons/rank2.png`} className='leader--rank'/>
+                        :
+                        (leader.rank === 3)?
+                        <img src={`${process.env.PUBLIC_URL}/assets/images/icons/rank3.png`} className='leader--rank'/>
+                        :
+                        <div className='leader--rank'><h5>{leader.rank}</h5></div>
+                    }
+                    
+                    <div className='leaderboard--item---Nameimg'>
+                        <img src={`${process.env.PUBLIC_URL}/assets/images/Ellipse29.png`}  className='leader--img'/>
+                        <h5 className='leader--name'>{leader.name}</h5> 
+                    </div>
+                    <h5 className='leaderboard--item---points leader--xp'>{leader.xp} XP</h5>
+                </div>
+            );
+        })
         return(
             <div className='levelbody'>
                 <h3 className='welcomeheading'>Welcome Back, Nishta!</h3>
@@ -182,22 +216,7 @@ class LevelBody extends Component{
                                                 </div>
                                             </div>
                                             <div className='b3__item--body'>
-                                                <div className='b3__item'>
-                                                    <img src={`${process.env.PUBLIC_URL}/assets/images/video1.png`}  />
-                                                    <h6>How does Meta-tagging work?</h6>
-                                                </div>
-                                                <div className='b3__item'>
-                                                    <img src={`${process.env.PUBLIC_URL}/assets/images/box3Item2.png`}  />
-                                                    <h6>Strategies to something</h6>
-                                                </div>
-                                                <div className='b3__item'>
-                                                    <img src={`${process.env.PUBLIC_URL}/assets/images/box3Item3.png`}  />
-                                                    <h6>Tips and ticks for Meta-tagging</h6>
-                                                </div>
-                                                <div className='b3__item'>
-                                                    <img src={`${process.env.PUBLIC_URL}/assets/images/box3Item4.png`}  />
-                                                    <h6>Earn more with Meta-tagging</h6>
-                                                </div>
+                                                {practice}
                                             </div>
                                             
                                         </div>
@@ -224,22 +243,7 @@ class LevelBody extends Component{
                                                 </div>   
                                             </div>
                                             <div className='b3__item--body'>
-                                                <div className='b3__item'>
-                                                    <img src={`${process.env.PUBLIC_URL}/assets/images/video1.png`}  />
-                                                    <h6>How does Meta-tagging work?</h6>
-                                                </div>
-                                                <div className='b3__item'>
-                                                    <img src={`${process.env.PUBLIC_URL}/assets/images/box3Item2.png`}  />
-                                                    <h6>Strategies to something</h6>
-                                                </div>
-                                                <div className='b3__item'>
-                                                    <img src={`${process.env.PUBLIC_URL}/assets/images/box3Item3.png`}  />
-                                                    <h6>Tips and ticks for Meta-tagging</h6>
-                                                </div>
-                                                <div className='b3__item'>
-                                                    <img src={`${process.env.PUBLIC_URL}/assets/images/box3Item4.png`}  />
-                                                    <h6>Earn more with Meta-tagging</h6>
-                                                </div>
+                                            {practice}
                                             </div>
                                             
                                         </div>
@@ -265,22 +269,7 @@ class LevelBody extends Component{
                                         </div>
                                     </div>
                                     <div className='b3__item--body'>
-                                        <div className='b3__item'>
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/video1.png`}  />
-                                            <h6>How does Meta-tagging work?</h6>
-                                        </div>
-                                        <div className='b3__item'>
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/box3Item2.png`}  />
-                                            <h6>Strategies to something</h6>
-                                        </div>
-                                        <div className='b3__item'>
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/box3Item3.png`}  />
-                                            <h6>Tips and ticks for Meta-tagging</h6>
-                                        </div>
-                                        <div className='b3__item'>
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/box3Item4.png`}  />
-                                            <h6>Earn more with Meta-tagging</h6>
-                                        </div>
+                                    {practice}
                                     </div>
                                     
                                 </div>
@@ -305,22 +294,7 @@ class LevelBody extends Component{
                                         </div>
                                     </div>
                                     <div className='b3__item--body'>
-                                        <div className='b3__item'>
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/video1.png`}  />
-                                            <h6>How does Meta-tagging work?</h6>
-                                        </div>
-                                        <div className='b3__item'>
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/box3Item2.png`}  />
-                                            <h6>Strategies to something</h6>
-                                        </div>
-                                        <div className='b3__item'>
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/box3Item3.png`}  />
-                                            <h6>Tips and ticks for Meta-tagging</h6>
-                                        </div>
-                                        <div className='b3__item'>
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/box3Item4.png`}  />
-                                            <h6>Earn more with Meta-tagging</h6>
-                                        </div>
+                                    {practice}
                                     </div>
                                     
                                 </div>
@@ -338,7 +312,58 @@ class LevelBody extends Component{
                             </div>
                         </div>
                     </div>
-                    <div className='col__right col__primary'></div>
+                    <div className='col__right'>
+                        <div className='col__right--BOX1 col__primary'>
+                                <div className='col__right--BOX1---left '>
+                                    <img src={`${process.env.PUBLIC_URL}/assets/images/icons/coin.png`}  />
+                                    <h4 className='div__header'>225</h4>
+                                </div>
+                                <h4 className='col__right--BOX1---right'>INR(&#x20b9;)</h4>
+
+                        </div>
+                        <div className='col__right--BOX2 col__primary'>
+
+                        </div>
+                        <div className='col__right--BOX3 col__primary'>
+                            <h2 className='div__header'>LeaderBoard</h2>
+                            <div className='leaderboard'>
+                                {leaders}
+                                <div className='leaderboard--item user'>
+                                    <img src={`${process.env.PUBLIC_URL}/assets/images/icons/rank1.png`} className='leader--rank'/>
+                                    <div className='leaderboard--item---Nameimg'>
+                                        <img src={`${process.env.PUBLIC_URL}/assets/images/Ellipse29.png`}  className='leader--img'/>
+                                        <h5 className='leader--name'>Vinayak J</h5> 
+                                    </div>
+                                    <h5 className='leaderboard--item---points leader--xp'>65367 XP</h5>
+                                </div> 
+                            </div>
+                            <a className='btn__whitepurple leaderboard--btn'> View all Ranking</a>
+                        </div>
+                        <div className='col__right--BOX4 col__primary'>
+                            <h2 className='contact div__header'>Contact Us</h2>
+                            <div className=' contact contact__phone'>
+                                <img src={`${process.env.PUBLIC_URL}/assets/images/icons/Call.png`}  className='contact__phone--call'/>
+                                <div className='contact__phone--call '>
+                                    <h5 className='contact__phone--call no1'>+91 9986 756 4364</h5>
+                                    <h5 className='contact__phone--call no2'>020 - 27656769</h5>  
+                                </div>
+    
+                            </div>
+                            <div className='contact contact__mail'>
+                                <img src={`${process.env.PUBLIC_URL}/assets/images/icons/mail.png`}  className='contact__mail'/>
+                                <h5>support@syllabify.com</h5>
+                            </div>   
+                            <div className='contact contact__followus'>
+                                <h5>Follows Us</h5>
+                                <div className='contact__followus--socialmedia'>
+                                    <img src={`${process.env.PUBLIC_URL}/assets/images/icons/facebook.png`}  className='socialmediaicon'/>
+                                    <img src={`${process.env.PUBLIC_URL}/assets/images/icons/twitter.png`}  className='socialmediaicon'/>
+                                    <img src={`${process.env.PUBLIC_URL}/assets/images/icons/instagram.png`}  className='socialmediaicon'/>
+                                    <img src={`${process.env.PUBLIC_URL}/assets/images/icons/linkedin.png`}  className='socialmediaicon'/>
+                                </div>
+                             </div>    
+                        </div>
+                    </div>
                 </div>
             </div>
         );

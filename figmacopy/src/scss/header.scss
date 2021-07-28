@@ -2,9 +2,11 @@
   .nav{
     z-index: -1;
     position: absolute;
-    width: 100%;
-    height: 56px;
-    left: 0px;
+    max-width: 1306px;
+    width: 124rem;
+    border-left: 1px solid #DFE1E6;
+    height: auto;
+    right: 0px;
     top: 0px;
 
     background-color: #FFFFFF;
@@ -51,9 +53,6 @@
       }
       .image{
         display: inline-block;
-        background-image: url(../img/Ellipse29.png);
-        background-repeat: no-repeat;
-        background-size: cover;
         width: 32px;  
         height: 32px;
       }

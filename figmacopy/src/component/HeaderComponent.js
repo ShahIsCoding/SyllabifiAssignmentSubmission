@@ -17,7 +17,7 @@ function Header() {
             </div>
             <div className='nav__item nav__profile'>
                 <h4>Nishta</h4>
-                <div className='image'></div>
+                <img src={`${process.env.PUBLIC_URL}/assets/images/Ellipse29.png`} className='image' />
             </div>
         </div>
     );
