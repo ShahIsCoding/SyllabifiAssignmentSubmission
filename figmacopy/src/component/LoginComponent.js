@@ -4,7 +4,7 @@ function LogIn() {
     return( 
         <div className='bg'>
             <div className='LogIn main-card'>
-                <div className='LogIn__img'></div>          
+                <img src={`${process.env.PUBLIC_URL}/assets/images/mobile.jpg`}  className='LogIn__img'/>      
                 <div className='LogIn__form'>
                     <div className='logo'>
                         <div className='logo__semicircle'></div>
@@ -35,10 +35,10 @@ function LogIn() {
 
                     <div className='btns'>
                         <div className='btns__b1'>
-                            <button className='btns__purple'>Sign Up &#8250;</button>
+                            <button className='btns__purple '>Sign Up &#8250;</button>
                             <div className='login'>
                                 <h4> Already have an account?</h4>
-                                <a href='#'>Login here</a>
+                                <a href='/desktop1'>Login here</a>
                             </div>
                         </div>
                         <div className='btns__b2'>

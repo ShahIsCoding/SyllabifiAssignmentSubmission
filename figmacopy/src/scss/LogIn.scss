@@ -26,43 +26,45 @@
   
       font-style: normal;
       font-weight: bold;
-      font-size: 22px;
+      font-size: 2.2rem;
       margin-bottom: 35px;
     }
     .register{
       font-style: normal;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 1.8rem;
     }
   
     .Form{
-      width: 280px;
+      width: 28rem;
       position: absolute;
   
       &__divs{
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
       
         &--label{
           display: block;
-          font-size: 12px;
+          font-size: 1.2rem;
           color: #25252D;
           font-style: normal;
           font-weight: 400;
         }
         &--input{
           display: block;
-          width: 280px;
+          width: 28rem;
           height: 48px;
           border: 1px solid rgba(54, 35, 129, 0.2);
           border-radius: 4px;
           padding-left:  10px;
+
+          font-size: 1.6rem;
         }
       }
     }
   }//end of .LogIn
   .btns{
     &__b1{
-      margin-bottom: 40px;
+      margin-bottom: 4rem;
       display: block;
     }//btn__b1
     &__b2{
@@ -72,7 +74,7 @@
         display: inline-block;
         margin: 0 5px;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 1.6rem;
         color: #828282;
       
       }
@@ -91,10 +93,12 @@
       border-radius: 4px;
       color: #FFFFFF;
       font-weight: 600;
-      margin-right: 19px;
+      font-size: 1.6rem;
+      margin-right: 1.9rem;
       
       border: 0;
-      padding: 5px;
+      width:10rem;  
+      height :4rem;
     }
   }
   .login{
@@ -105,12 +109,12 @@
     h4{
       color:#828282;
       font-family: 400;
-      font-size: 14px;
+      font-size: 1.4rem;
       margin-bottom: -5px;
     }
     a{
       font-weight: 600;
-      font-size: 14px;
+      font-size: 1.4rem;
       text-decoration: none;
       color: #8759F2;
     }
