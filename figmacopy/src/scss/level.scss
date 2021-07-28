@@ -8,7 +8,8 @@
     max-width: 1306px;
     width: 124rem;
     
-    height: 147.1rem;
+    max-height: 202vh;
+    min-height: 190vh;
     padding: 3.6rem 0 4rem 0;
 
 
@@ -451,10 +452,18 @@
                 }
               }
               &__followus{
-                h5{color: #25252D;
-                font-style: normal;
-                font-weight: normal;
-              }}
+                  h5{color: #25252D;
+                  font-weight:600;
+                }
+                img:first-child{
+                  filter: grayscale(10);
+                }
+                img:first-child{
+                  &:hover{
+                    filter: grayscale(0);
+                  }
+                }
+              }
             }
           }
         }

@@ -10,7 +10,14 @@ class LevelBody extends Component{
             box3_item1:true,
             box3_item2:false,
             box3_item3:false,
-            box3_item4:false 
+            box3_item4:false,
+            user:{
+                name:'Nishta',
+                rank:1,
+                xp:65357,
+                subject:'Physics',
+                money:255
+            } 
         }
         this.toggleItem1= this.toggleItem1.bind(this);
         this.toggleItem2= this.toggleItem2.bind(this);
@@ -110,7 +117,7 @@ class LevelBody extends Component{
                         </div>
                         <div className='assignment__name--topic'>
                             <h5>Assignment #{assignment.number}</h5>
-                            <h4>Physics <mark className='exam'>(IIT JEE)</mark></h4>    
+                            <h4>{this.state.user.subject} <mark className='exam'>(IIT JEE)</mark></h4>    
                         </div>
                     </div>
                     <div className='assignment__money'>
@@ -160,7 +167,7 @@ class LevelBody extends Component{
         })
         return(
             <div className='levelbody'>
-                <h3 className='welcomeheading'>Welcome Back, Nishta!</h3>
+                <h3 className='welcomeheading'>Welcome Back, {this.state.user.name}!</h3>
                 <div className='mainbody columns'>
                     <div className='col__left'>
                         <div className='col__left--box1'>
@@ -316,7 +323,7 @@ class LevelBody extends Component{
                         <div className='col__right--BOX1 col__primary'>
                                 <div className='col__right--BOX1---left '>
                                     <img src={`${process.env.PUBLIC_URL}/assets/images/icons/coin.png`}  />
-                                    <h4 className='div__header'>225</h4>
+                                    <h4 className='div__header'>{this.state.user.money}</h4>
                                 </div>
                                 <h4 className='col__right--BOX1---right'>INR(&#x20b9;)</h4>
 
@@ -329,10 +336,21 @@ class LevelBody extends Component{
                             <div className='leaderboard'>
                                 {leaders}
                                 <div className='leaderboard--item user'>
-                                    <img src={`${process.env.PUBLIC_URL}/assets/images/icons/rank1.png`} className='leader--rank'/>
+                                    {
+                                        (this.state.user.rank===1)?
+                                        <img src={`${process.env.PUBLIC_URL}/assets/images/icons/rank1.png`} className='leader--rank'/>
+                                        :
+                                        (this.state.user.rank === 2)?
+                                        <img src={`${process.env.PUBLIC_URL}/assets/images/icons/rank2.png`} className='leader--rank'/>
+                                        :
+                                        (this.state.user.rank === 3)?
+                                        <img src={`${process.env.PUBLIC_URL}/assets/images/icons/rank3.png`} className='leader--rank'/>
+                                        :
+                                        <div className='leader--rank'><h5>{this.state.user.rank}</h5></div>
+                                    }
                                     <div className='leaderboard--item---Nameimg'>
                                         <img src={`${process.env.PUBLIC_URL}/assets/images/Ellipse29.png`}  className='leader--img'/>
-                                        <h5 className='leader--name'>Vinayak J</h5> 
+                                        <h5 className='leader--name'>{this.state.user.name}</h5> 
                                     </div>
                                     <h5 className='leaderboard--item---points leader--xp'>65367 XP</h5>
                                 </div> 

@@ -43,7 +43,7 @@ export const rankinglist =[
         id:5,
         name:'Satish K',
         rank:6,
-        xp:599979,
+        xp:59979,
         subject:'Physics',
         money:255
     },
