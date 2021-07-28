@@ -146,6 +146,7 @@ $size14:1vw;
 
     .top__heading{
       font-weight: 600;
+      font-size: 2*$size14;
       color: #25252D;
       margin-left: 4.66*$size14;
     }
@@ -204,9 +205,9 @@ $size14:1vw;
                     color:  rgb(245, 61, 107);
                     background-color: #FFFFFF;
                   
-                  .arrow{
-                    position: relative;
-                  }
+                    .arrow{
+                      position: relative;
+                    }
                   }
                 }
               }
@@ -241,6 +242,144 @@ $size14:1vw;
           &--box2{
             max-width: 750px;
             height: 612px;
+
+            .box2{
+              &__header{
+                display: block;
+
+                &--top{
+                  font-size: 22px;   
+                  color: #25252D;
+                  font-weight: bold;               
+                }
+                &--bottom{
+                  font-weight: normal;
+                  color: #6E6E86;
+                  h4{display: inline-block; font-size: 16px;}
+                  h3{display: inline-block;color: #8759F2;float: right;font-size: 16px;}
+                }
+                margin-bottom: 16px;
+              }
+              &__date{
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                color: #6E6E86;
+              }
+              &__assignment{
+                display: flex;
+                flex-flow: nowrap column;
+                align-items: flex-start;
+
+                .assignment{
+                  display: flex;
+                  flex-flow: nowrap row;
+                  justify-content: space-between;
+                  width: 100%;
+                  height: 73px;
+                  border-radius: 4px;
+
+                  &:hover{
+                    background-color: #F7F7F8;
+
+                    .assignment__button{
+                      color: #FFFFFF;
+                      background-color: #8759F2;
+                    }
+                  }
+                  &__name{
+                    display: flex;
+                    flex-flow: nowrap row;
+
+                    margin: 17px;
+                    &--logo{
+                      width: 40px;
+                      height: 40px;
+                      background: #FFE8F0;
+                      border-radius:100px;
+
+                      img{
+                        transform: scale(0.65);
+                        margin: 3px;
+                      }
+                    }
+                    &--topic{
+                      margin-left: 12px;
+                      h5{
+                        font-weight: 600;
+                        font-size: 16px;
+                        color: #25252D;
+                      }
+                      h4{
+                        font-size: 14px;
+                        line-height: 17px;
+                        font-weight: 600;
+                        color: #25252D;
+                        mark{
+                          color: #9DA7BD;
+                          background-color: #FFFFFF;
+                        }
+                      }
+                    }
+                  }
+                  &__money{
+                    margin: 18px 0;
+                    h4{
+                      font-size: 14px;
+                      color: #091E42;
+                    }
+                    h5{
+                      font-size: 14px;
+                      color: #97A0AF;
+                    }
+                  }
+                  &__status{
+                    width: 86px;
+                    height: 28px;
+
+                    border-radius: 50px;  
+
+                    display: flex;
+                    flex-flow: nowrap row;
+                    justify-content: center;
+                    margin: 21px 0 24px 0;
+                    padding:5px;
+                    &--assigned{
+                      background-color: #DBF3ED;
+                    }
+                    &--rejected{
+                      background-color: rgba(245, 61, 107, 0.2);
+                    }
+                    &--completed{background-color: rgba(250, 181, 52, 0.25);;}
+                    img{
+                      display: inline-block;
+                      padding: 4px;
+                    }
+                    h6{
+                      display: inline-block;
+                      font-weight: 600;
+                      font-size: 12px;
+                    }
+                    .assigned{color: #00BA88;}
+                    .rejected{}
+                    .completed{}
+                  }
+                  &__button{
+
+                    padding: 7px 31px;
+                    margin: 16px 16px 16px 0;
+                    font-size: 16px;
+                    text-decoration: none;
+                    height: 40px;
+                    font-weight: 600;
+                    background-color: #FFFFFF;
+                    border-radius: 8px;
+                    color: #8759F2;
+
+                 }
+                }
+              }
+            }
           }
           &--box3{
             max-width: 750px;

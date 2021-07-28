@@ -1,0 +1,1 @@
+export const assigned = './img/assigned.png';
