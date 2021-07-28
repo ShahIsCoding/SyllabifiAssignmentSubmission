@@ -77,7 +77,7 @@ class LevelBody extends Component{
             if(assignment.status==='Assigned'){
                 return(
                     <div className='assignment__status assignment__status--assigned'>
-                        <img src={`${process.env.PUBLIC_URL}/assets/images/assigned.png`}  />
+                        <img src={`${process.env.PUBLIC_URL}/assets/images/icons/assigned.png`}  />
                         <h6 className=''>{assignment.status}</h6>
                     </div>
                 );
@@ -85,15 +85,15 @@ class LevelBody extends Component{
             else if(assignment.status === 'Rejected'){
                 return(
                     <div className='assignment__status assignment__status--rejected'>
-                        <img src={`${process.env.PUBLIC_URL}/assets/images/rejected.png`}  />
-                        <h6 className=''>{assignment.status}{assignment.progess}'/'{ assignment.numofquestions}</h6>
+                        <img src={`${process.env.PUBLIC_URL}/assets/images/icons/rejected.png`}  />
+                        <h6 className=''>{assignment.status}{assignment.progess}/{ assignment.numofquestions}</h6>
                     </div>                  
                 );
             }
             else{
                 return(
                     <div className='assignment__status assignment__status--completed'>
-                        <img src={`${process.env.PUBLIC_URL}/assets/images/completed.png`}  />
+                        <img src={`${process.env.PUBLIC_URL}/assets/images/icons/completed.png`}  />
                         <h6 className=''>{(assignment.progess!==100)?assignment.progess:null}{assignment.status}</h6>
                     </div>
                 );
@@ -104,11 +104,11 @@ class LevelBody extends Component{
                 <div className='assignment'>
                     <div className='assignment__name'>
                         <div className='assignment__name--logo'>
-                            <img src={`${process.env.PUBLIC_URL}/assets/images/Password.png`}  />                 
+                            <img src={`${process.env.PUBLIC_URL}/assets/images/icons/Password.png`}  />                 
                         </div>
                         <div className='assignment__name--topic'>
                             <h5>Assignment #{assignment.number}</h5>
-                            <h4>Physics <mark>(IIT JEE)</mark></h4>    
+                            <h4>Physics <mark className='exam'>(IIT JEE)</mark></h4>    
                         </div>
                     </div>
                     <div className='assignment__money'>
@@ -126,13 +126,13 @@ class LevelBody extends Component{
 
         return(
             <div className='levelbody'>
-                <h3 className='top__heading'>Welcome Back, Nishta!</h3>
-                <div className=' mainbody'>
+                <h3 className='welcomeheading'>Welcome Back, Nishta!</h3>
+                <div className='mainbody columns'>
                     <div className='col__left'>
                         <div className='col__left--box1'>
                             <div className='box1__left  col__primary'> 
                                 <div className='papercircle papercircle--rd '>
-                                    <img src={`${process.env.PUBLIC_URL}/assets/images/PaperFail.png`}  />
+                                    <img src={`${process.env.PUBLIC_URL}/assets/images/icons/PaperFail.png`}  />
                                 </div>
                                 <div className='box1__left--text'> 
                                     <h3 className='div__header'>See What's on pirority?</h3>
@@ -141,7 +141,7 @@ class LevelBody extends Component{
                             </div>
                             <div className='box1__right col__primary'>
                                 <div className='papercircle papercircle--gr'>
-                                    <img src={`${process.env.PUBLIC_URL}/assets/images/PaperPlus.png`}  />
+                                    <img src={`${process.env.PUBLIC_URL}/assets/images/icons/PaperPlus.png`}  />
                                 </div>
                                 <div className='box1__right--text'> 
                                     <h3>New Task</h3>
@@ -178,7 +178,7 @@ class LevelBody extends Component{
                                             <div className='b3__item--header'>
                                                 <h4 >Tips for Meta-tagging solutions</h4>
                                                 <div onClick={this.toggleItem1}>
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/minus.png`}  />
+                                                <img src={`${process.env.PUBLIC_URL}/assets/images/icons/minus.png`}  />
                                                 </div>
                                             </div>
                                             <div className='b3__item--body'>
@@ -207,7 +207,7 @@ class LevelBody extends Component{
                                         <div className='b3__item--header'>
                                             <h4 >Tips for Meta-tagging solutions</h4>
                                             <div onClick={this.toggleItem1}>
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/plus.png`}  />
+                                                <img src={`${process.env.PUBLIC_URL}/assets/images/icons/plus.png`}  />
                                             </div>
                                         </div>   
                                     </div>
@@ -215,11 +215,13 @@ class LevelBody extends Component{
                                 {(this.state.box3_item2)?
 
                                         <div className='box3__body--items'>
-                                            <div className='b3__item--header'>
-                                                <h4 >Tips for Solving Questions</h4>
-                                                <div onClick={this.toggleItem2}>
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/minus.png`}  />
-                                                </div>
+                                            <div className='collapsed'>
+                                                <div className='b3__item--header'>
+                                                    <h4 >Tips for Solving Questions</h4>
+                                                    <div onClick={this.toggleItem2}>
+                                                        <img src={`${process.env.PUBLIC_URL}/assets/images/icons/minus.png`}  />
+                                                    </div>
+                                                </div>   
                                             </div>
                                             <div className='b3__item--body'>
                                                 <div className='b3__item'>
@@ -247,7 +249,7 @@ class LevelBody extends Component{
                                         <div className='b3__item--header'>
                                             <h4 >Tips for Solving Questions</h4>
                                             <div onClick={this.toggleItem2}>
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/plus.png`}  />
+                                                <img src={`${process.env.PUBLIC_URL}/assets/images/icons/plus.png`}  />
                                             </div>
                                         </div>   
                                     </div>
@@ -259,7 +261,7 @@ class LevelBody extends Component{
                                     <div className='b3__item--header'>
                                         <h4 >Strategies for finding error</h4>
                                         <div onClick={this.toggleItem3}>
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/minus.png`}  />
+                                        <img src={`${process.env.PUBLIC_URL}/assets/images/icons/minus.png`}  />
                                         </div>
                                     </div>
                                     <div className='b3__item--body'>
@@ -288,7 +290,7 @@ class LevelBody extends Component{
                                 <div className='b3__item--header'>
                                     <h4 >Strategies for finding error</h4>
                                     <div onClick={this.toggleItem3}>
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/plus.png`}  />
+                                        <img src={`${process.env.PUBLIC_URL}/assets/images/icons/plus.png`}  />
                                     </div>
                                 </div>   
                                 </div>
@@ -299,7 +301,7 @@ class LevelBody extends Component{
                                     <div className='b3__item--header'>
                                         <h4> How to make Vidoe Solutions</h4>
                                         <div onClick={this.toggleItem4}>
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/minus.png`}  />
+                                        <img src={`${process.env.PUBLIC_URL}/assets/images/icons/minus.png`}  />
                                         </div>
                                     </div>
                                     <div className='b3__item--body'>
@@ -328,7 +330,7 @@ class LevelBody extends Component{
                                 <div className='b3__item--header'>
                                     <h4 >How to make Vidoe Solutions</h4>
                                     <div onClick={this.toggleItem4}>
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/plus.png`}  />
+                                        <img src={`${process.env.PUBLIC_URL}/assets/images/icons/plus.png`}  />
                                     </div>
                                 </div>   
                                 </div>

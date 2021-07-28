@@ -4,7 +4,8 @@ html,body,*{
     padding: 0;
     box-sizing: border-box;
     font-family: 'Proxima Nova';
-    cursor: url(../img/image83.png),auto;
+    font-size: 00.6944444vw;
+    cursor: url('./cursor.png'),auto;
   }
   
   .bg{
@@ -15,13 +16,13 @@ html,body,*{
   
  
   .main-card{
-    border-radius: 16px;
+    border-radius: 1.6rem;
     margin: auto;
     background-color: #FFFFFF;
     position: absolute;
     box-shadow: 0px 24px 60px rgba(36, 20, 72, 0.1);
     padding: 40px;
-    width:   843px;
+    width:   84.3rem;
     height:  653px;
   }
   .btn__click{
@@ -105,7 +106,7 @@ html,body,*{
   }
   
   .div__header{
-    font-size: 22px;
+    font-size: 2.2rem;
     font-weight: bold;
     color: #25252D;
   }

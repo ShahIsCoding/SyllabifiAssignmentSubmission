@@ -4,51 +4,41 @@ function Dashboard(){
     return(
             <div className='dashboard'>
                 <div className='dashboard__header'>
-                    <div className='logo'>
-                    <a href="https://imgur.com/HPCIpVB"><img src="https://i.imgur.com/HPCIpVB.png" title="source: imgur.com" /></a>
+                    <div className='dashboard__header--logo'>
+                        <img src={`${process.env.PUBLIC_URL}/assets/images/icons/companylogo.png`}  />
                     </div>
-                    <div className='company_name'>
+                    <div className='dashboard__header--company_name'>
                         <h2>Company</h2>    
                     </div>
                 </div>
                 <div className='dashboard__items'>
-                    <div className='item'>
+                    <div className='item item--dashboard'>
                         <div className='img__dashboard imgs'>
-                            <a href="https://imgur.com/pa0o4Ue">
-                                <img src="https://i.imgur.com/pa0o4Ue.png" title="source: imgur.com" />
-                            </a>
+                            <img src={`${process.env.PUBLIC_URL}/assets/images/icons/Category.png`}  />
                         </div>
                         <h5>Dashboard</h5>
                     </div>
-                    <div className='item'>
+                    <div className='item item--task'>
                         <div className='img__tasks imgs'>
-                            <a href="https://imgur.com/Y3B0wYx">
-                                <img src="https://i.imgur.com/Y3B0wYx.png" title="source: imgur.com" />
-                            </a>
+                            <img src={`${process.env.PUBLIC_URL}/assets/images/icons/Work.png`}  />
                         </div>
                         <h5>Tasks</h5>
                     </div>
-                    <div className='item'>
+                    <div className='item item--task'>
                         <div className='img__perfomance imgs'>
-                            <a href="https://imgur.com/PRBem8q">
-                                <img src="https://i.imgur.com/PRBem8q.png" title="source: imgur.com" />
-                            </a>
+                            <img src={`${process.env.PUBLIC_URL}/assets/images/icons/Activity.png`}  />
                         </div>
                         <h5>Performance</h5>
                     </div>
-                    <div className='item'>
+                    <div className='item item--money'>
                         <div className='img__earnings imgs'>
-                            <a href="https://imgur.com/UknCFF9">
-                                <img src="https://i.imgur.com/UknCFF9.png" title="source: imgur.com" />
-                            </a>
+                            <img src={`${process.env.PUBLIC_URL}/assets/images/icons/Wallet.png`}  />
                         </div>
                         <h5>Earnings</h5>
                     </div>
-                    <div className='item'>
+                    <div className='item item--profile'>
                         <div className='img__profile imgs'>
-                            <a href="https://imgur.com/Ocjq1cX">
-                                <img src="https://i.imgur.com/Ocjq1cX.png" title="source: imgur.com" />
-                            </a>
+                            <img src={`${process.env.PUBLIC_URL}/assets/images/icons/Profile.png`}  />
                         </div>
                         <h5>Profile</h5>
                     </div>
