@@ -11,41 +11,41 @@ function Desktop1() {
                     </div>
                     <div className='cards'>
                         <div className='card maths'>
-                            <div className='card__img card__img--maths'></div>
-                            <div className='card__text'>Mathematics</div>
+                            <img src={`${process.env.PUBLIC_URL}/assets/images/maths.jpg`} className='card__img '  />
+                            <h5 className='card__text'>Mathematics</h5>
                             <input type='checkbox' value='mathematics'/>
                         </div>
                         <div className='card chem'>
-                            <div className='card__img card__img--chem'></div>
-                            <div className='card__text'>Chemistry</div>
+                            <img src={`${process.env.PUBLIC_URL}/assets/images/chem.jpg`} className='card__img '  />
+                            <h5 className='card__text'>Chemistry</h5>
                             <input type='checkbox' value='Chemistry'/>
                         </div>
                         <div className='card phy'>
-                            <div className='card__img card__img--phy'></div>
-                            <div className='card__text'>Physics</div>
+                            <img src={`${process.env.PUBLIC_URL}/assets/images/physics.jpg`} className='card__img '  />
+                            <h5 className='card__text'>Physics</h5>
                             <input type='checkbox' value='Physics'/>
                         </div>
                         <div className='card bio'>
-                            <div className='card__img card__img--bio'></div>
-                            <div className='card__text'>Biology</div>
+                            <img src={`${process.env.PUBLIC_URL}/assets/images/bio.jpg`} className='card__img '  />
+                            <h5 className='card__text'>Biology</h5>
                             <input type='checkbox' value='biology'/>
                         </div>
                         <div className='card lr'>
-                            <div className='card__img card__img--lr'></div>
-                            <div className='card__text'>logicalResoning</div>
+                            <img src={`${process.env.PUBLIC_URL}/assets/images/lr.jpg`} className='card__img '  />
+                            <h5 className='card__text'>logicalResoning</h5>
                             <input type='checkbox' value='logicalResoning'/>
                         </div>
                         <div className='card other'>
-                            <div className='card__img card__img--other'></div>
-                            <div className='card__text'>Others</div>
+                            <img src={`${process.env.PUBLIC_URL}/assets/images/others.jpg`} className='card__img '  />
+                            <h5 className='card__text'>Others</h5>
                             <input type='checkbox' value='Others'/>
                         </div>
                     </div>
                     <div className='footer'>
-                        <a className='previous'>Previous</a>
+                        <a className='previous text' href='/login'>Previous</a>
                         <div className='footer__right'>
-                            <a className='skip'>Skip</a>
-                            <button className='btns__purple'>Next</button>
+                            <a className='skip text' href='/desktop2'>Skip</a>
+                            <a className='btn_purple next' href='/desktop2'>Next</a>
                         </div>        
                     </div>
                 </div>

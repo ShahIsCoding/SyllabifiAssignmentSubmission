@@ -1,41 +1,49 @@
 
 .desk{
-    position: absolute;
-    width: 922px;
-    height: 663px;
-    margin: 0 222px;
-    top: 52px;
-    
+  position: absolute;
+  width: 922px;
+  height: 663px;
+  left: 0;
+  top: 0;
+  margin: 6.7vh 16.61vw;
+  display: flex;
+  flex-flow: nowrap column;
+  justify-content: space-around;
+  align-items: center;
+
     .header {
       text-align: center;
       position: relative;
       top: 66px;
+      margin-bottom: 7.2rem;
   
       h3{
         color: #25252D;
+        font-size: 2.8rem;
+        font-weight: 600;
       }
       h6{
         color: #828282;
+        font-size: 1.6rem;
       }
     }
     
     .footer{
-      position: relative;
-      top: 473px;
-      left: 45px;
       display: flex;
       flex-flow: nowrap row;
       justify-content: space-between;
       align-items: baseline;
-      width:777px;
-      a{
+      width:77.7rem;
+      .text{
         text-decoration: none;
         color: #8759F2;
-        cursor: pointer;
+        font-size: 1.6rem;
+        font-weight: 600;
       }
-      button{
+      .next{
       width: 100px;
       height: 41px;  
+      padding: 1.1rem 3.5rem;
       margin:0 0 0 24px ;
     }
     }
@@ -44,11 +52,8 @@
       flex-flow: wrap row;
   
       width: 800px;
-      height: 272px;
+      height: 27.2rem;
   
-      position:absolute;
-      left: 66px;
-      top: 230px;
     }
   
     .card{
@@ -65,29 +70,13 @@
           width: 96px;  
           height: 96px;
           border-radius: 8px;
-          &--maths{
-            background-image: url(../img/maths.jpg);
-          }
-          &--chem{
-            background-image: url(../img/chem.jpg);
-          }
-          &--phy{
-            background-image: url(../img/physics.jpg);
-          }
-          &--bio{
-            background-image: url(../img/bio.jpg);
-          }
-          &--lr{
-            background-image: url(../img/lr.jpg);
-          }
-          &--other{
-            background-image: url(../img/others.jpg);
-          }
         }
       &__text{
         position: absolute;
         top: 48px;
         left: 120px;
+        font-weight: 600;
+        font-size: 16px;
       }  
       input{
         position: absolute;

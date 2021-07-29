@@ -5,9 +5,7 @@ function Desktop2() {
         <div className='bg'>
             <div className='container'>
                 <div className='desk2 main-card'>
-                    <div className='header'>
-                        <h2>Set your Preference</h2>
-                    </div>
+                    <h2 className='header'>Set your Preference</h2>
                     <div className='username'>
                         <div className='username__data'>
                             <label className='lab__data'>Set your username*</label>
@@ -41,14 +39,14 @@ function Desktop2() {
                     </div>
                     <div className='pentab'>
                         <h4>Do you have a Pen-tablet/i-pad with stylus/android tablet with stylus?</h4>
-                        <button className='btn-outline btn__click'>Yes</button>
-                        <button className='btn-outline btn__click'>No</button>
+                        <button className='btn-outline'>Yes</button>
+                        <button className='btn-outline'>No</button>
                     </div>
                     <div className='footer'>
-                        <a className='previous'>Previous</a>
+                        <a className='previous text' href='/desktop1'>Previous</a>
                         <div className='footer__right'>
-                            <a className='skip'>Skip</a>
-                            <button className='btns__purple btn__click'>Next</button>
+                            <a className='skip text' href='/home'>Skip</a>
+                            <a className='btn_purple next' href='/home'>Next</a>
                         </div>        
                     </div>
                 </div>
