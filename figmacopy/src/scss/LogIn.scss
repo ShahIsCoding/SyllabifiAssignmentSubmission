@@ -8,22 +8,21 @@
 
 }
 .LogIn{
-    top: 35px;
-    left: 261px;
-  
+    top: 3.5rem;
+    left: 26.1rem;
+    position:absolute;
+
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: flex-start;
+
     &__img{
-      display: inline-block;
       width: 44.3rem;
-      height: 573px;
       border-radius: 8px;
   
-      margin-right: 40px;
+      margin-right: 4rem;
     
   
-    }
-    &__form{
-      display: inline-block;
-      position: absolute;
     }
       
     //end of .logo

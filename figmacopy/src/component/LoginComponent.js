@@ -10,6 +10,7 @@ class LogIn extends Component{
                 repassword:''
         }
         this.value = this.value.bind(this);
+        this.check = this.check.bind(this);
     }
 
     value(e){
@@ -18,6 +19,14 @@ class LogIn extends Component{
             [e.target.name]:e.target.value
         });
         console.log(this.state);
+    }
+    check(){
+        if(this.state.password!== this.state.repassword){
+            alert('Password re enterd is not same')
+        }
+        if(this.state.name === '' || this.state.email === '' || this.state.password === '' || this.state.repassword === ''){
+            alert('Cannot leave a field empty')
+        }
     }
     render(){
     return( 
@@ -49,14 +58,14 @@ class LogIn extends Component{
                         </div>
                         <div className='Form__divs'>
                             <label className='Form__divs--label'>Re-enter Password</label>
-                           <input className='Form__divs--input' type='password' name='password' placeholder='Re-enter Password'/>
+                           <input className='Form__divs--input' type='password' name='password' placeholder='Re-enter Password' onBlur={this.value} />
                         </div> 
                         <div className='btns'>
                             <div className='btns__b1'>
-                                <a className='btn__signin btn_purple' href='/desktop1'>Sign Up &#8250;</a>
+                                <a className='btn__signin btn_purple' onClick={this.check} href='/desktop1'>Sign Up &#8250;</a>
                                 <div className='login'>
                                     <h4> Already have an account?</h4>
-                                    <a href='/desktop1'>Login here</a>
+                                    <a href='/desktop1' onClick={this.check} >Login here</a>
                                 </div>
                             </div>
                             <div className='btns__b2'>
