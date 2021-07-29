@@ -11,8 +11,8 @@ class Level extends Component {
     return(
         <div className='level'>
             <Dashboard />
-            <Header />
-            <LevelBody />
+            <Header name={this.props.user} />
+            <LevelBody name={this.props.user}/>
         </div>
     );}
 }

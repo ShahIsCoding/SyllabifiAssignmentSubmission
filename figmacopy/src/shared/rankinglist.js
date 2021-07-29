@@ -5,15 +5,17 @@ export const rankinglist =[
         rank:1,
         xp:65357,
         subject:'Physics',
-        money:255
+        money:255,
+        img:`${process.env.PUBLIC_URL}/assets/images/Ellipse92.png`
     },
     {
         id:1,
         name:'Udit N',
         rank:2,
-        xp:653299,
+        xp:65299,
         subject:'Physics',
-        money:255
+        money:255,
+        img:`${process.env.PUBLIC_URL}/assets/images/Ellipse93.png`
     },
     {
         id:2,
@@ -21,7 +23,8 @@ export const rankinglist =[
         rank:3,
         xp:63658,
         subject:'Physics',
-        money:255
+        money:255,
+        img:`${process.env.PUBLIC_URL}/assets/images/Ellipse94.png`
     },
     {
         id:3,
@@ -29,7 +32,8 @@ export const rankinglist =[
         rank:4,
         xp:61986,
         subject:'Physics',
-        money:255
+        money:255,
+        img:`${process.env.PUBLIC_URL}/assets/images/Ellipse95.png`
     },
     {
         id:4,
@@ -37,7 +41,8 @@ export const rankinglist =[
         rank:5,
         xp:60003,
         subject:'Physics',
-        money:255
+        money:255,
+        img:`${process.env.PUBLIC_URL}/assets/images/Ellipse96.png`
     },
     {
         id:5,
@@ -45,7 +50,8 @@ export const rankinglist =[
         rank:6,
         xp:59979,
         subject:'Physics',
-        money:255
+        money:255,
+        img:`${process.env.PUBLIC_URL}/assets/images/Ellipse97.png`
     },
     {
         id:6,
@@ -53,12 +59,13 @@ export const rankinglist =[
         rank:7,
         xp:59237,
         subject:'Physics',
-        money:255
+        money:255,
+        img:`${process.env.PUBLIC_URL}/assets/images/Ellipse97.png`
     },
     {
         id:7,
         name:'Nishtha D',
-        rank:8,
+        rank:134,
         xp:2500,
         subject:'Physics',
         money:225

@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Desktop2() {
+    
+    const [time,accessTime] = useState(1);
     return(
         <div className='bg'>
             <div className='container'>
@@ -13,11 +15,11 @@ function Desktop2() {
                         </div>
                         <div className='username__time'>
                             <label className='lab__time'>Set your daily hours*</label>
-                            <input className='inp__time' placeholder='01'/>
+                            <input className='inp__time' placeholder={time}/>
                         </div>
                         <div className='username__btn'>
-                            <a className='dec'>-</a>
-                            <a className='inc'>+</a>    
+                            <a className='dec' onClick={() => accessTime(time - 1)}>-</a>
+                            <a className='inc' onClick={() => accessTime(time + 1)}>+</a>    
                         </div>
                     </div>
                     <div className='language'>
@@ -46,7 +48,7 @@ function Desktop2() {
                         <a className='previous text' href='/desktop1'>Previous</a>
                         <div className='footer__right'>
                             <a className='skip text' href='/home'>Skip</a>
-                            <a className='btn_purple next' href='/home'>Next</a>
+                            <a className='btn_purple btn__click next' href='/home'>Next</a>
                         </div>        
                     </div>
                 </div>

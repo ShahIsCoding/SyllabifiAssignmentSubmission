@@ -1,6 +1,12 @@
 import React from 'react';
+import { Component } from 'react';
 
-function Header() {
+class Header extends Component {
+    
+    constructor(props){
+        super(props);
+    }
+    render(){
     return(
         <div className='nav'>
             <div className=' nav__item nav__XP'>
@@ -17,10 +23,10 @@ function Header() {
             </div>
             <div className='nav__item nav__profile'>
                 <h4>Nishta</h4>
-                <img src={`${process.env.PUBLIC_URL}/assets/images/Ellipse29.png`} className='image' />
+                <img src={`${process.env.PUBLIC_URL}/assets/images/Ellipse29.png`} className='image' alt='images'/>
             </div>
         </div>
-    );
+    );}
 }
 
 export default Header;

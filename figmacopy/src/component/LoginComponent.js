@@ -62,7 +62,7 @@ class LogIn extends Component{
                         </div> 
                         <div className='btns'>
                             <div className='btns__b1'>
-                                <a className='btn__signin btn_purple' onClick={this.check} href='/desktop1'>Sign Up &#8250;</a>
+                                <a className='btn__signin btn_purple btn__click' onClick={this.check} href='/desktop1'>Sign Up &#8250;</a>
                                 <div className='login'>
                                     <h4> Already have an account?</h4>
                                     <a href='/desktop1' onClick={this.check} >Login here</a>

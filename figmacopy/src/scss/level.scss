@@ -1,4 +1,3 @@
-
   .levelbody{
     background-color: #F8F6FA;
     position:absolute;
@@ -281,7 +280,7 @@
                   margin: 2.4rem 0;
                   .b3__item{
                     width: 16.2rem;
-                    height: 144px;
+                    height: auto;
       
                     padding:.7rem;
                     background: #FFFFFF;
@@ -404,9 +403,6 @@
                   &--img{
                     width: 2.4rem;
                     height: 2.4rem;
-                    &:hover{
-                      color: red;
-                    }
                   }
                 }
               }
