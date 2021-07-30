@@ -8,17 +8,15 @@ class LogIn extends Component{
                 email:'',
                 password:'',
                 repassword:''
-        }
+        }//states to preserv the data of form 
         this.value = this.value.bind(this);
         this.check = this.check.bind(this);
     }
 
     value(e){
-        console.log(e.target.name,'  ',e.target.value);
         this.setState({
             [e.target.name]:e.target.value
-        });
-        console.log(this.state);
+        });//onchange in form updates the respective field 
     }
     check(){
         if(this.state.password!== this.state.repassword){
@@ -26,39 +24,42 @@ class LogIn extends Component{
         }
         if(this.state.name === '' || this.state.email === '' || this.state.password === '' || this.state.repassword === ''){
             alert('Cannot leave a field empty')
-        }
+        }//check id password and re entered  password are same or not .
     }
     render(){
     return( 
         <div className='bg'>
             <div className='LogIn main-card'>
-                <img src={`${process.env.PUBLIC_URL}/assets/images/mobile.jpg`}  className='LogIn__img' alt='mobile.jpg'/>      
+                <img src={`${process.env.PUBLIC_URL}/assets/images/mobile.jpg`}  className='LogIn__img' alt='mobile.jpg'/>  
+                {/* getting the mobile img */}
                 <div className='LogIn__form'>
                     <div className='logo'>
                         <div className='logo__semicircle'></div>
                         <div className='logo__circle logo__circle--y'></div>
                         <div className='logo__circle logo__circle--p'></div>
                     </div>
+                    {/* creating the company logo */}
                     <div className='company_name'>
                         <h2>Company</h2>    
                     </div>
                     <h3 className='register p45'>Register</h3>
                     <form className='Form'>
+                        {/* form component with name, password,email  */}
                         <div className='Form__divs'>
                             <label className='Form__divs--label'>Name</label>
-                            <input className='Form__divs--input' type='text' name='name' placeholder='Enter full name' onBlur={this.value}/>
+                            <input className='Form__divs--input' type='text' name='name'value={this.state.name} placeholder='Enter full name' onChange={this.value}/>
                         </div>
                         <div className='Form__divs'>
                             <label className='Form__divs--label'>Email</label>
-                            <input className='Form__divs--input' type='email' name='email' placeholder='Enter Email' onBlur={this.value}/>
+                            <input className='Form__divs--input' type='email' name='email' value={this.state.email} placeholder='Enter Email' onChange={this.value}/>
                         </div>
                         <div className='Form__divs'>
                             <label className='Form__divs--label'>Create Password</label>
-                           <input className='Form__divs--input' type='password' name='password' placeholder='Enter Password' onBlur={this.value}/>
+                           <input className='Form__divs--input' type='password' name='password' value={this.state.password} placeholder='Enter Password' onChange={this.value}/>
                         </div>
                         <div className='Form__divs'>
                             <label className='Form__divs--label'>Re-enter Password</label>
-                           <input className='Form__divs--input' type='password' name='password' placeholder='Re-enter Password' onBlur={this.value} />
+                           <input className='Form__divs--input' type='password' name='repassword' value={this.state.repassword} placeholder='Re-enter Password' onChange={this.value} />
                         </div> 
                         <div className='btns'>
                             <div className='btns__b1'>
@@ -66,6 +67,7 @@ class LogIn extends Component{
                                 <div className='login'>
                                     <h4> Already have an account?</h4>
                                     <a href='/desktop1' onClick={this.check} >Login here</a>
+                                    {/* directs to desktop 1 when clicked */}
                                 </div>
                             </div>
                             <div className='btns__b2'>
