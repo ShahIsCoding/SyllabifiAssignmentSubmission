@@ -10,9 +10,10 @@ class Level extends Component {
     render(){
     return(
         <div className='level'>
+            {/* Level Component is divided into 3 parts Header, Dashboard , LevelBody  */}
             <Dashboard />
-            <Header name={this.props.user} />
-            <LevelBody name={this.props.user}/>
+            <Header />
+            <LevelBody/>
         </div>
     );}
 }

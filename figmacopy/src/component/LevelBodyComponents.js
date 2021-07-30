@@ -83,6 +83,7 @@ class LevelBody extends Component{
     render(){
 
         const assignment_status = (assignment) =>{
+            // checking if status is assigned
             if(assignment.status==='Assigned'){
                 return(
                     <div className='assignment__status assignment__status--assigned'>
@@ -91,6 +92,7 @@ class LevelBody extends Component{
                     </div>
                 );
             }
+            // if rejected the h6 tags access the progress passed in the assignment 
             else if(assignment.status === 'Rejected'){
                 return(
                     <div className='assignment__status assignment__status--rejected'>
@@ -99,6 +101,7 @@ class LevelBody extends Component{
                     </div>                  
                 );
             }
+            // if completed the h6 tag shows progress if a percentage is completed
             else{
                 return(
                     <div className='assignment__status assignment__status--completed'>
@@ -108,9 +111,12 @@ class LevelBody extends Component{
                 );
             }
         };
+        
+        // assignment made on list 
         const assignments = list.map((assignment) =>{
             return(
                 <div className='assignment'>
+                    {/* assignment name and logo */}
                     <div className='assignment__name'>
                         <div className='assignment__name--logo'>
                             <img src={`${process.env.PUBLIC_URL}/assets/images/icons/Password.png`} alt='pass' />                 
@@ -120,11 +126,13 @@ class LevelBody extends Component{
                             <h4>{this.state.user.subject} <mark className='exam'>(IIT JEE)</mark></h4>    
                         </div>
                     </div>
+                    {/* displayed  money  */}
                     <div className='assignment__money'>
                         <h4>&#x20b9; {assignment.money}/q</h4>
                         <h5>{assignment.numofquestions} questions</h5>
                     </div>
- 
+                        {/* as there are 3 options on assignment status assignement_status() return the assignment status based upon assignemnt state field in the list doc.
+                        LINE 85   */}
                         {assignment_status(assignment)}
 
                         <a className='assignment__button btn__click'>Continue</a>
@@ -165,22 +173,34 @@ class LevelBody extends Component{
                 </div>
             );
         })
-        return(
+
+
+/*---------------------------------------------------------------------MAIN RETURN STATEMENT-------------------------------------------------------------------------------------*/
+       
+
+    return(
             <div className='levelbody'>
                 <h3 className='welcomeheading'>Welcome Back, {this.state.user.name}!</h3>
                 <div className='mainbody columns'>
+                    {/* Dividing the body into 2 columns namely the left and right column */}
                     <div className='col__left'>
+                        {/* the left column is sub divided into 3 boxs as the left col contains 3 boxs */}
                         <div className='col__left--box1'>
+                            {/* the box1 contains a left and right box  */}
                             <div className='box1__left  col__primary'> 
+                                {/* the papercircle is the class for getting the red circle at back and we get an desired image on top of it its a separate class because it has been used many times */}
                                 <div className='papercircle papercircle--rd '>
                                     <img src={`${process.env.PUBLIC_URL}/assets/images/icons/PaperFail.png`} alt='paperFail' />
                                 </div>
                                 <div className='box1__left--text'> 
+                                    {/* div header is the header of the box with font 22px and weight 600 */}
                                     <h3 className='div__header'>See What's on pirority?</h3>
+                                    {/* css properties  has been added to mark to make the text only pink */}
                                     <h4>Complete <mark>12 rejected questions</mark> to earn <mark>&#x20b9; 30/q</mark><mark></mark>&emsp;&emsp;<mark>&#8594;</mark></h4>
                                 </div>
                             </div>
                             <div className='box1__right col__primary'>
+                                
                                 <div className='papercircle papercircle--gr'>
                                     <img src={`${process.env.PUBLIC_URL}/assets/images/icons/PaperPlus.png`}  alt='paperPlus'/>
                                 </div>
@@ -191,7 +211,7 @@ class LevelBody extends Component{
                             </div>
                         </div>
 
-
+                        {/* working on the box 2  */}
                         <div className='col__left--box2 col__primary'>
                             <div className='box2__header'>
                                 <h3 className='box2__header--top div__header'>Complete tasks to start at Syllabify!</h3>
@@ -203,9 +223,12 @@ class LevelBody extends Component{
                             <hr/>
                             <h4 className='box2__date'>Wednesday:28 July 2021</h4>
                             <div className='box2__assignment'>
+                                {/* as it is a list of assignment the list has been imported from assignment list from shared folder furter code on line 112 */}
                                 {assignments}
                             </div>
                         </div>
+
+{/* /*----------------------------------------------------------------box 3-----------------------------------------------------------------*/ }
 
 
                         <div className='col__left--box3 col__primary'>
@@ -213,6 +236,9 @@ class LevelBody extends Component{
                                 <h3 className='div__header'>Best Practices</h3>
                             </div> 
                             <div className='box3__body'>
+                                {/* as there are 4 items to toggle between their states are  maintained and only one at a time can be opend in case a item is closed it automatically open the next item.
+                                checking is item is true (opened) .
+                                Each item has this whole code written for it as each time different state and function is being called*/}
                                 {(this.state.box3_item1)?
 
                                         <div className='box3__body--items'>
@@ -222,6 +248,7 @@ class LevelBody extends Component{
                                                 <img src={`${process.env.PUBLIC_URL}/assets/images/icons/minus.png`}  alt='minus'/>
                                                 </div>
                                             </div>
+                                            {/* practice gives the sub items in a item LINE 143 */}
                                             <div className='b3__item--body'>
                                                 {practice}
                                             </div>
@@ -229,6 +256,7 @@ class LevelBody extends Component{
                                         </div>
 
                                 :
+                                    // if the state is false i.e item is closed so this div is returned which inly conatins the heading and  + sign 
                                     <div className='collapsed'>
                                         <div className='b3__item--header'>
                                             <h4 >Tips for Meta-tagging solutions</h4>
@@ -238,6 +266,7 @@ class LevelBody extends Component{
                                         </div>   
                                     </div>
                                 }
+
                                 {(this.state.box3_item2)?
 
                                         <div className='box3__body--items'>
@@ -319,6 +348,8 @@ class LevelBody extends Component{
                             </div>
                         </div>
                     </div>
+
+{/* -------------------------------------------------------------------COL RIGHT---------------------------------------------------------------- */}
                     <div className='col__right'>
                         <div className='col__right--BOX1 col__primary'>
                                 <div className='col__right--BOX1---left '>
@@ -326,15 +357,19 @@ class LevelBody extends Component{
                                     <h4 className='div__header'>{this.state.user.money}</h4>
                                 </div>
                                 <h4 className='col__right--BOX1---right'>INR(&#x20b9;)</h4>
-
                         </div>
                         <div className='col__right--BOX2 col__primary'>
-
+                                {/* grph to be added*/}
                         </div>
                         <div className='col__right--BOX3 col__primary'>
                             <h2 className='div__header'>LeaderBoard</h2>
                             <div className='leaderboard'>
+                                {/* leaders get the list of top 6 user according to the ranking doc form shared folder 
+                                LINE 152 */}
+                                
                                 {leaders}
+                                {/* showing the div for user which data is stored in state
+                                 */}
                                 <div className='leaderboard--item user'>
                                     {
                                         (this.state.user.rank===1)?

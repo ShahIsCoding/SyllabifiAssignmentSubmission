@@ -25,6 +25,7 @@ class LogIn extends Component{
         if(this.state.name === '' || this.state.email === '' || this.state.password === '' || this.state.repassword === ''){
             alert('Cannot leave a field empty')
         }//check id password and re entered  password are same or not .
+        this.props.accessUser(this.state.name,this.state.email);
     }
     render(){
     return( 
